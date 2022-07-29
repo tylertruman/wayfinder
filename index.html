@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <title>wayfinder</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
+      <a class="navbar-brand ms-3" href="#">
+        <img src="" height="45" alt=""
+          loading="lazy">
+        <span class="ms-2">WayFinder</span>
+      </a>
+    </nav>
+  </header>
+  <main>
+    <div class="container-fluid">
+      <!-- TODO change id to trips after building and replacing template for injection -->
+      <section id="trips" class="row">
+        <!-- Trips injection goes here -->
+        <h3 class="offset-1 col-3 text-center mt-2 mb-0 bg-warning rounded-top">DisneyWorld</h3>
+        <div class="offset-1 col-10 bg-warning">
+          <section class="row">
+            <div class="col-1">
+              <h5>Type</h5>
+            </div>
+            <div class="col-2">
+              <h5>Name</h5>
+            </div>
+            <div class="col-3">
+              <h5>Confirmation Number</h5>
+            </div>
+            <div class="col-3">
+              <h5>Address</h5>
+            </div>
+            <div class="col-2">
+              <h5>Date</h5>
+            </div>
+            <div class="col-1">
+              <h5>Cost</h5>
+            </div>
+          </section>
+          <div id="">
+            <section id="" class="row">
+              <div class="col-1">
+                <p>Type Here</p>
+              </div>
+              <div class="col-2">
+                <p>Name Here</p>
+              </div>
+              <div class="col-3">
+                <p>Confirmation Number Here</p>
+              </div>
+              <div class="col-3">
+                <p>Address Here</p>
+              </div>
+              <div class="col-2">
+                <p>Date Here</p>
+              </div>
+              <div class="col-1">
+                <p>Cost Here</p>
+              </div>
+            </section>
+            <section class="row">
+              <div class="col-12">
+                <hr>
+              </div>
+              <div class="col-1">
+                <form class="" onsubmit="app.reservationsController.createReservation('${this.id}')">
+                  <select class="form-control" name="type" id="type" required>
+                    <option value="🛩">🛩 Flight</option>
+                    <option value="🏨">🏨 Lodging</option>
+                    <option value="🎡">🎡 Attraction</option>
+                    <option value="🚗">🚗 Rental Car</option>
+                  </select>
+              </div>
+              <div class="col-2">
+                <input class="form-control" type="text" name="name" id="name">
+              </div>
+              <div class="col-3">
+                <input class="form-control" type="text" name="confirmationNumber" , id="confirmationNumber">
+              </div>
+              <div class="col-3">
+                <input class="form-control" type="text" name="address" id="address">
+              </div>
+              <div class="col-2">
+                <input class="form-control" type="date" name="date" id="date">
+              </div>
+              <div class="col-1">
+                <input class="form-control" type="number" name="cost" id="cost">
+              </div>
+              <div class="col-12 text-end">
+                <button class="btn btn-primary mt-2">Add Reservation</button>
+              </div>
+            </form>
+              <div class="col-6">
+                <label class="form-label fw-bold">Notes</label>
+                <textarea rows="3" class="form-control" onblur="app.tripsController.editTrip('${this.id}')">${this.note}</textarea>
+              </div>
+              <div class="col-12 text-end my-2">Trip Total: $${this.TripTotal}</div>
+            </section>
+
+          
+          </div>
+        </div> 
+      </section>
+    </div>
+  </main>
+  <footer class="bg-dark text-light">
+    <div class="text-center no-select">
+      <p><small>Made by Tyler Truman</small></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+  <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
