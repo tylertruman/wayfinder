@@ -6,9 +6,19 @@ import { loadState, saveState } from "../Utils/LocalStorage.js";
 
 
 
+// function _draw(){
+//     let template = ''
+//     let trips = ProxyState.trips.sort((a, b) => a.date - b.date)
+//     console.log(trips);
+//     trips.forEach(t => template += t.Template)
+//     console.log(template);
+//     document.getElementById('trips').innerHTML = template
+// }
+
 function _draw(){
     let template = ''
     let trips = ProxyState.trips.sort((a, b) => a.date - b.date)
+    let reservations = ProxyState.reservations.sort((a, b) => a.date - b.date)
     console.log(trips);
     trips.forEach(t => template += t.Template)
     console.log(template);
@@ -32,7 +42,7 @@ export class TripsController {
         let form = window.event.target
         let newTrip = {
             title: form.title.value,
-            date: form.date.value,
+            // date: form.date.value,
             note: form.note.value
         }
         console.log(newTrip);

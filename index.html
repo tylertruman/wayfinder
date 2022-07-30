@@ -10,7 +10,7 @@
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
-  <title>wayfinder</title>
+  <title>WayFinder</title>
 </head>
 
 <body>
@@ -25,10 +25,25 @@
   </header>
   <main>
     <div class="container-fluid">
-      <!-- TODO change id to trips after building and replacing template for injection -->
+      
+        <form class="row bg-primary mb-3" id="" onsubmit="app.tripsController.createTrip()">
+          <div class="mb-3 mt-2 col-6 offset-1">
+            <label for="title" class="form-label"><b>Trip Title:</b></label>
+            <input name="title" id="title" type="text" minlength="3" maxlength="15" required class="form-control"
+              aria-describedby="helpId" placeholder="Title">
+          </div>
+          <div class="mb-3 col-8 offset-1">
+            <label for="note" class="form-label"><b>Trip Notes:</b></label>
+            <textarea name="note" id="note" class="form-control" required aria-describedby="helpId"
+              placeholder="Notes"></textarea>
+          </div>
+          <div class="col-12 text-center pb-3">
+          <button class="btn btn-info text-center">Create Trip</button>
+        </div>
+        </form>
       <section id="trips" class="row">
-        <!-- Trips injection goes here -->
-        <h3 class="offset-1 col-3 text-center mt-2 mb-0 bg-warning rounded-top">DisneyWorld</h3>
+        <!-- Injection goes here -->
+        <!-- <h3 class="offset-1 col-3 text-center mt-2 mb-0 bg-warning rounded-top">DisneyWorld</h3>
         <div class="offset-1 col-10 bg-warning">
           <section class="row">
             <div class="col-1">
@@ -107,7 +122,7 @@
                 <label class="form-label fw-bold">Notes</label>
                 <textarea rows="3" class="form-control" onblur="app.tripsController.editTrip('${this.id}')">${this.note}</textarea>
               </div>
-              <div class="col-12 text-end my-2">Trip Total: $${this.TripTotal}</div>
+              <div class="col-12 text-end my-2">Trip Total: $${this.TripTotal}</div> -->
             </section>
 
           

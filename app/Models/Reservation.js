@@ -8,7 +8,7 @@ export class Reservation{
         this.name = data.name,
         this.confirmation = data.confirmation,
         this.address = data.address,
-        this.date = data.date,
+        this.date = new Date(data.date),
         this.cost = data.cost
         this.tripId = data.tripId
     }
@@ -28,11 +28,10 @@ export class Reservation{
                 <p>${this.address}</p>
               </div>
               <div class="col-2">
-                <p>${this.date}</p>
+                <p>${this.date.toLocaleDateString('en-US')}</p>
               </div>
               <div class="col-1">
-                <p>${this.cost}</p>
-                <i class="mdi mdi-delete-forever selectable px-2" onclick="app.reservationsController.deleteReservation('${this.id}')"></i>
+                <p>${this.cost} <span class="selectable px-2" onclick="app.reservationsController.deleteReservation('${this.id}')"> 🗑</span></p>
               </div>`
     }
 }

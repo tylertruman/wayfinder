@@ -1,4 +1,6 @@
+import { ProxyState } from "../AppState.js";
 import { reservationsService } from "../Services/ReservationsService.js"
+import { Pop } from "../Utils/Pop.js";
 
 
 
@@ -22,10 +24,12 @@ export class ReservationsController {
         }
         console.log(newReservation);
         reservationsService.createReservation(newReservation)
+        Pop.toast('Reservation Created', 'success')
     }
 
-    deleteReservation(id){
-        if(window.confirm()){
+    async deleteReservation(id){
+        if(await Pop.confirm()){
+            console.log('deleting reservation', id);
             reservationsService.deleteReservation(id)
         }
     }

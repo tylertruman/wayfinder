@@ -13,8 +13,9 @@ export class Trip{
 
     get Template(){
         return `
-        <h3 class="offset-1 col-3 text-center mt-2 mb-0 bg-warning rounded-top">${this.title}</h3>
-        <div class="offset-1 col-10 bg-warning">
+        <h3 class="offset-1 col-3 text-center mt-2 mb-0 bg-trip rounded-top">${this.title}</h3>
+        <h5 class="col-2 mb-2 mt-3 "><span id="" class="selectable bg-danger rounded px-1" onclick="app.tripsController.deleteTrip('${this.id}')">X</span></h5>
+        <div class="offset-1 col-10 bg-trip">
           <section class="row">
             <div class="col-1">
               <h5>Type</h5>
@@ -56,19 +57,19 @@ export class Trip{
                   </select>
               </div>
               <div class="col-2">
-                <input class="form-control" type="text" name="name" id="name">
+                <input class="form-control" type="text" name="name" id="name" required>
               </div>
               <div class="col-3">
-                <input class="form-control" type="text" name="confirmation" , id="confirmation">
+                <input class="form-control" type="text" name="confirmation" , id="confirmation" required>
               </div>
               <div class="col-3">
-                <input class="form-control" type="text" name="address" id="address">
+                <input class="form-control" type="text" name="address" id="address" required>
               </div>
               <div class="col-2">
-                <input class="form-control" type="date" name="date" id="date">
+                <input class="form-control" type="date" name="date" id="date" required>
               </div>
               <div class="col-1">
-                <input class="form-control" type="number" name="cost" id="cost">
+                <input class="form-control" type="number" name="cost" id="cost" required>
               </div>
               <div class="col-12 text-end">
                 <button class="btn btn-primary mt-2">Add Reservation</button>
@@ -88,7 +89,6 @@ export class Trip{
 
     get Reservations(){
         let template = ''
-        debugger
         let reservations = ProxyState.reservations.filter(reservation => reservation.tripId == this.id)
         reservations.forEach(reservation => template += reservation.Template)
         if(template){
