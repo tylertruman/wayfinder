@@ -48,7 +48,7 @@ export class TripsController {
         console.log(newTrip);
         tripsService.createTrip(newTrip)
         Pop.toast('Trip Created', 'success')
-
+        form.reset()
     }
 
     async deleteTrip(id){
