@@ -57,19 +57,19 @@ export class Trip{
                   </select>
               </div>
               <div class="col-2">
-                <input class="form-control" type="text" name="name" id="name" required>
+                <input class="form-control" type="text" name="name" id="name" placeholder="name" required>
               </div>
               <div class="col-3">
-                <input class="form-control" type="text" name="confirmation" , id="confirmation" required>
+                <input class="form-control" type="text" name="confirmation" id="confirmation" placeholder="confirmation code" required>
               </div>
               <div class="col-3">
-                <input class="form-control" type="text" name="address" id="address" required>
+                <input class="form-control" type="text" name="address" id="address" placeholder="address" required>
               </div>
               <div class="col-2">
                 <input class="form-control" type="date" name="date" id="date" required>
               </div>
               <div class="col-1">
-                <input class="form-control" type="number" name="cost" id="cost" required>
+                <input class="form-control" type="number" name="cost" id="cost" placeholder="cost" required>
               </div>
               <div class="col-12 text-end">
                 <button class="btn btn-primary mt-2">Add Reservation</button>
