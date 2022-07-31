@@ -13,9 +13,9 @@ export class Trip{
 
     get Template(){
         return `
-        <h3 class="offset-1 col-3 text-center mt-2 mb-0 bg-trip rounded-top">${this.title}</h3>
+        <h3 class="offset-1 col-3 text-center mt-3 mb-0 bg-trip rounded-top elevation-2">${this.title}</h3>
         <h5 class="col-2 mb-2 mt-3 "><span id="" class="selectable bg-danger rounded px-1" onclick="app.tripsController.deleteTrip('${this.id}')">X</span></h5>
-        <div class="offset-1 col-10 bg-trip">
+        <div class="offset-1 col-10 bg-trip elevation-2 pt-2">
           <section class="row">
             <div class="col-1">
               <h5>Type</h5>
@@ -37,7 +37,7 @@ export class Trip{
             </div>
           </section>
           <div id="">
-            <section id="" class="row">
+            <section id="" class="row bg-reservation rounded">
 
             ${this.Reservations}
 
@@ -79,7 +79,7 @@ export class Trip{
                 <label class="form-label fw-bold">Notes</label>
                 <textarea rows="3" class="form-control" onblur="app.tripsController.editTrip('${this.id}')">${this.note}</textarea>
               </div>
-              <div class="col-12 text-end my-2">Trip Total: $${this.TripTotal}</div>
+              <div class="col-12 text-end my-2">Trip Total: <span class="text-success">$${this.TripTotal}</span></div>
             </section>
 
           

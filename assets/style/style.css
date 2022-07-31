@@ -6,3 +6,11 @@ body {
 .bg-trip {
     background-color: rgb(255, 255, 255);
 }
+
+.bg-reservation {
+    background-color: rgb(175, 226, 255);
+}
+
+.dropdown-menu {
+    width: 250px;
+}

@@ -21,12 +21,27 @@
           loading="lazy">
         <span class="ms-2">WayFinder</span>
       </a>
+      <div class="dropdown p-2">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Add Trip
+        </button>
+        <form class="dropdown-menu p-2 text-center" onsubmit="app.tripsController.createTrip()">
+          <div class="form-group p-1 text-start">
+            <label for="title">Trip Title:</label>
+            <input type="text" class="form-control" id="title" placeholder="Title" minlength="3" maxlength="15" required>
+          </div>
+          <div class="form-group p-1 text-start">
+            <label for="note">Trip Notes:</label>
+            <input type="text" class="form-control" id="note" placeholder="Notes" required>
+          </div>
+          <button type="submit" class="btn btn-primary mt-2 mb-1 mx-1">Create Trip</button>
+        </form>
+      </div>
     </nav>
   </header>
   <main>
     <div class="container-fluid">
-      
-        <form class="row bg-primary mb-3" id="" onsubmit="app.tripsController.createTrip()">
+          <!-- <form class="row bg-primary mb-3" id="" onsubmit="app.tripsController.createTrip()">
           <div class="mb-3 mt-2 col-6 offset-1">
             <label for="title" class="form-label"><b>Trip Title:</b></label>
             <input name="title" id="title" type="text" minlength="3" maxlength="15" required class="form-control"
@@ -40,7 +55,7 @@
           <div class="col-12 text-center pb-3">
           <button class="btn btn-info text-center">Create Trip</button>
         </div>
-        </form>
+        </form> -->
       <section id="trips" class="row">
         <!-- Injection goes here -->
         <!-- <h3 class="offset-1 col-3 text-center mt-2 mb-0 bg-warning rounded-top">DisneyWorld</h3>
@@ -124,8 +139,6 @@
               </div>
               <div class="col-12 text-end my-2">Trip Total: $${this.TripTotal}</div> -->
             </section>
-
-          
           </div>
         </div> 
       </section>
@@ -137,12 +150,20 @@
     </div>
   </footer>
 
+  <!-- test for bootstrap to get popper working -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
     integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
-  <script src="app/main.js" type="module"></script>
+    <script src="app/main.js" type="module"></script>
+  <!-- Popper  -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -15,7 +15,8 @@ export class Reservation{
 
     get Template(){
         return `
-        <div class="col-1">
+        <hr>
+              <div class="col-1">
                 <p>${this.type}</p>
               </div>
               <div class="col-2">
@@ -31,7 +32,8 @@ export class Reservation{
                 <p>${this.date.toLocaleDateString('en-US')}</p>
               </div>
               <div class="col-1">
-                <p>${this.cost} <span class="selectable px-2" onclick="app.reservationsController.deleteReservation('${this.id}')"> 🗑</span></p>
-              </div>`
+                <p>$${this.cost} <span class="selectable bg-danger rounded p-1" onclick="app.reservationsController.deleteReservation('${this.id}')"> X</span></p>
+              </div>
+              `
     }
 }
